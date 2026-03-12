@@ -1,0 +1,48 @@
+{
+	"name": "@mariozechner/pi-whew",
+	"version": "0.57.1",
+	"description": "WHEW (What-How-Exec-Why) dual-agent supervisor CLI",
+	"type": "module",
+	"bin": {
+		"whew": "dist/main.js"
+	},
+	"main": "./dist/index.js",
+	"types": "./dist/index.d.ts",
+	"files": [
+		"dist",
+		"CHANGELOG.md"
+	],
+	"scripts": {
+		"clean": "shx rm -rf dist",
+		"build": "tsgo -p tsconfig.build.json && shx chmod +x dist/main.js",
+		"dev": "tsgo -p tsconfig.build.json --watch --preserveWatchOutput",
+		"prepublishOnly": "npm run clean && npm run build"
+	},
+	"dependencies": {
+		"@mariozechner/pi-agent-core": "^0.57.1",
+		"@mariozechner/pi-ai": "^0.57.1",
+		"@mariozechner/pi-coding-agent": "^0.57.1",
+		"@sinclair/typebox": "^0.34.0"
+	},
+	"devDependencies": {
+		"@types/node": "^24.3.0",
+		"typescript": "^5.7.3"
+	},
+	"keywords": [
+		"whew",
+		"dual-agent",
+		"supervisor",
+		"ai",
+		"agent"
+	],
+	"author": "Mario Zechner",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/badlogic/pi-mono.git",
+		"directory": "packages/whew"
+	},
+	"engines": {
+		"node": ">=20.0.0"
+	}
+}

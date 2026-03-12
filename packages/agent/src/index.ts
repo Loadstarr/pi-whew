@@ -6,3 +6,5 @@ export * from "./agent-loop.js";
 export * from "./proxy.js";
 // Types
 export * from "./types.js";
+// WHEW dual-agent tools
+export * from "./whew.js";
